@@ -11,9 +11,10 @@ app.get('/api/hello', (req: express.Request , res: express.Response) => {
   res.send({ express: 'Hello From Express' });
 });
 
-app.post('/api/world', (req: express.Request , res: express.Response) => {
+app.post('/api/world', (req: any , res: express.Response) => {
+  console.log(req.body);
   res.send(
-    `I received your POST request. This is what you sent me:`,
+    `I received your POST request. This is what you sent me: ${req.body}`,
   );
 });
 
