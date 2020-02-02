@@ -1,39 +1,56 @@
 {
-  "name": "beam-exam",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.26",
-    "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.1",
-    "typescript": "^3.7.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "beam-exam",
+    "version": "0.1.0",
+    "private": true,
+    "proxy": "http://localhost:5000/",
+    "scripts": {
+        "start": "cd client && npm start",
+        "build": "cd client && npm build",
+        "test": "cd client && npm test",
+        "eject": "cd client && npm eject",
+        "client": "npm run start",
+        "server": "cd server && nodemon app.ts",
+        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    },
+    "devDependencies": {
+        "@types/express": "github:types/npm-express",
+        "@types/node": "^13.7.0",
+        "eslint": "^6.8.0",
+        "eslint-plugin-import": "^2.20.0",
+        "nodemon": "^2.0.2",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.7.5"
+    },
+    "dependencies": {
+        "@types/body-parser": "^1.17.1",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.4.0",
+        "@testing-library/user-event": "^7.2.1",
+        "@types/jest": "^24.9.1",
+        "@types/node": "^12.12.26",
+        "@types/react": "^16.9.19",
+        "@types/react-dom": "^16.9.5",
+        "node-sass": "^4.13.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-scripts": "3.3.1",
+        "typescript": "^3.7.5"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
